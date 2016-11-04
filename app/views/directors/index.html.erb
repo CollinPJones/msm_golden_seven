@@ -1,28 +1,39 @@
 <h1>Directors</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Dob</th>
-      <th>Name</th>
-      <th>Bio</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @director.each do |director| %>
-    <tr>
-      <th><img src="<%= director.image_url %>" alt="<%= director.name %>" width="80"/></th>
-      <th><%= director.dob %></th>
-      <th><%= director.name %></th>
-      <th><%= director.bio %></th>
-      <th><a href="https://google.com" class="btn btn-primary">S</a></th>
-      <th></th>
-      <th></th>
-    </tr>
-    <% end  %>
-  </tbody>
-</table>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Dob</th>
+        <th>Name</th>
+        <th>Bio</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @director.each do |director| %>
+      <tr>
+        <th><img src="<%= director.image_url %>" alt="<%= director.name %>" width="80"/></th>
+        <th><%= director.dob %></th>
+        <th><%= director.name %></th>
+        <th><%= director.bio %></th>
+        <th><a href="https://google.com" class="btn btn-primary">S</a></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% end  %>
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
