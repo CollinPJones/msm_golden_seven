@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #Movie Routes
   #Read
   get("/movies", :controller => "movies", :action => "index")
-
+  get("/movies/:id", :controller => "movies", :action => "show")
 
   #Actor Routes
   #Read
