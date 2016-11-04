@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   #Actor Routes
   #Read
   get("/actors", :controller =>"actors", :action => "index")
+  get("/actors/:id", :controller => "actors", :action => "show")
 
   #Role Routes
   #Read
