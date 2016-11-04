@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #Director Routes
   #Read
   get("/directors", :controller => "directors", :action => "index")
+  get("/directors/:id", :controller => "directors", :action => "show")
 
 
   #Movie Routes
