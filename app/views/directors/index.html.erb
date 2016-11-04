@@ -1,6 +1,12 @@
-<h1>Directors</h1>
+
 
 <div class="container">
+  <div class="page-header">
+    <h1>Directors</h1>
+  </div>
+  <p>
+    <a href="https://google.com" class="btn btn-primary">Add a New Director</a>
+  </p>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -21,8 +27,8 @@
         <th><%= director.name %></th>
         <th><%= director.bio %></th>
         <th><a href="https://google.com" class="btn btn-primary">S</a></th>
-        <th></th>
-        <th></th>
+        <th><a href="https://google.com" class="btn btn-warning">E</a></th>
+        <th><a href="https://google.com" class="btn btn-danger">D</a></th>
       </tr>
       <% end  %>
     </tbody>
