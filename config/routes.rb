@@ -22,6 +22,10 @@ Rails.application.routes.draw do
   get("/movies/:id", :controller => "movies", :action => "show")
 
   #Actor Routes
+  #Create
+  get("/actors/new_form", :controller => "actors", :action => "new_form")
+  get("/create_actor", :controller => "actors", :action => "create_row")
+
   #Read
   get("/actors", :controller =>"actors", :action => "index")
   get("/actors/:id", :controller => "actors", :action => "show")
