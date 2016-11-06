@@ -30,7 +30,7 @@
         <td><%= movie.description %></td>
         <td><a href="/movies/<%= movie.id %>" class="btn btn-primary">S</a></td>
         <td><a href="/movies/<%= movie.id %>/edit" class="btn btn-warning">E</a></td>
-        <td><a href="https://www.google.com" class="btn btn-danger">D</a></td>
+        <td><a href="/delete_movie/<%= movie.id %>" class="btn btn-danger">D</a></td>
       </tr>
       <% end %>
     </tbody>

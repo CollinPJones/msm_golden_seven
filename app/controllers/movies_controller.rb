@@ -39,4 +39,11 @@ class MoviesController < ApplicationController
     redirect_to("/movies/#{@movie.id}")
   end
 
+  def delete_row
+    @movie = Movie.find_by({ :id => params[:id]})
+    @movie.destroy
+
+    redirect_to("/movies")
+  end
+
 end

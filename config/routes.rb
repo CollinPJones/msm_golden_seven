@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #First page
   get("/", :controller => "movies", :action => "index")
 
-  #Director Routes
+  #############Director Routes
   #Create
   get("/directors/new_form", :controller => "directors", :action => "new_form")
   get("/create_director", :controller => "directors", :action => "create_row")
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #Delete
   get("/delete_director/:id", :controller => "directors", :action => "delete_row")
 
-  #Movie Routes
+  #############Movie Routes
   #Create
   get("/movies/new_form", :controller => "movies", :action => "new_form")
   get("/create_movie", :controller => "movies", :action => "create_row")
@@ -31,7 +31,10 @@ Rails.application.routes.draw do
   get("/movies/:id/edit", :controller => "movies", :action => "edit")
   get("/update_movie/:id", :controller => "movies", :action => "update_row")
 
-  #Actor Routes
+  #Delete
+  get("/delete_movie/:id", :controller => "movies", :action => "delete_row")
+
+  #############Actor Routes
   #Create
   get("/actors/new_form", :controller => "actors", :action => "new_form")
   get("/create_actor", :controller => "actors", :action => "create_row")
