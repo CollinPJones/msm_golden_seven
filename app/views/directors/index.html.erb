@@ -28,7 +28,7 @@
         <th><%= director.bio %></th>
         <th><a href="/directors/<%= director.id %>" class="btn btn-primary">S</a></th>
         <th><a href="/directors/<%= director.id %>/edit" class="btn btn-warning">E</a></th>
-        <th><a href="https://google.com" class="btn btn-danger">D</a></th>
+        <th><a href="/delete_director/<%= director.id %>" class="btn btn-danger">D</a></th>
       </tr>
       <% end  %>
     </tbody>

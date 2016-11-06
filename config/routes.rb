@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get("/directors/:id/edit", :controller => "directors", :action => "edit")
   get("/update_director/:id", :controller => "directors", :action => "update_row")
 
+  #Delete
+  get("/delete_director/:id", :controller => "directors", :action => "delete_row")
+
   #Movie Routes
   #Create
   get("/movies/new_form", :controller => "movies", :action => "new_form")
