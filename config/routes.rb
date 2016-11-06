@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   #Movie Routes
   #Create
+  get("/movies/new_form", :controller => "movies", :action => "new_form")
+  get("/create_movie", :controller => "movies", :action => "create_row")
 
   #Read
   get("/movies", :controller => "movies", :action => "index")
