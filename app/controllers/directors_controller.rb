@@ -13,13 +13,13 @@ class DirectorsController < ApplicationController
   end
 
   def create_row
-    @director = Director.new
-    @director.dob = params[:dob]
-    @director.name = params[:name]
-    @director.bio = params[:bio]
-    @director.image_url = params[:image_url]
-    @director.save
-    redirect_to("/directors/#{@director.id}")
+    director = Director.new
+    director.dob = params[:dob]
+    director.name = params[:name]
+    director.bio = params[:bio]
+    director.image_url = params[:image_url]
+    director.save
+    redirect_to("/directors/#{director.id}")
   end
 
   def edit
@@ -27,18 +27,18 @@ class DirectorsController < ApplicationController
   end
 
   def update_row
-    @director = Director.find_by({:id => params[:id]})
-    @director.dob = params[:dob]
-    @director.name = params[:name]
-    @director.bio = params[:bio]
-    @director.image_url = params[:image_url]
-    @director.save
-    redirect_to("/directors/#{@director.id}")
+    director = Director.find_by({:id => params[:id]})
+    director.dob = params[:dob]
+    director.name = params[:name]
+    director.bio = params[:bio]
+    director.image_url = params[:image_url]
+    director.save
+    redirect_to("/directors/#{director.id}")
   end
 
   def delete_row
-    @director = Director.find_by({:id => params[:id]})
-    @director.destroy
+    director = Director.find_by({:id => params[:id]})
+    director.destroy
     redirect_to("/directors")
   end
 

@@ -13,14 +13,14 @@ class ActorsController < ApplicationController
 
 
   def create_row
-    @actor = Actor.new
-    @actor.dob = params[:dob]
-    @actor.name = params[:name]
-    @actor.bio = params[:bio]
-    @actor.image_url = params[:image_url]
-    @actor.save
+    actor = Actor.new
+    actor.dob = params[:dob]
+    actor.name = params[:name]
+    actor.bio = params[:bio]
+    actor.image_url = params[:image_url]
+    actor.save
 
-    redirect_to("/actors/#{@actor.id}")
+    redirect_to("/actors/#{actor.id}")
   end
 
   def edit
@@ -28,13 +28,20 @@ class ActorsController < ApplicationController
   end
 
   def update_row
-    @actor = Actor.find_by({ :id => params[:id]})
-    @actor.dob = params[:dob]
-    @actor.name = params[:name]
-    @actor.bio = params[:bio]
-    @actor.image_url = params[:image_url]
-    @actor.save
+    actor = Actor.find_by({ :id => params[:id]})
+    actor.dob = params[:dob]
+    actor.name = params[:name]
+    actor.bio = params[:bio]
+    actor.image_url = params[:image_url]
+    actor.save
 
-    redirect_to("/actors/#{@actor.id}")
+    redirect_to("/actors/#{actor.id}")
+  end
+
+  def delete_row
+    actor = Actor.find_by({ :id => params[:id]})
+    actor.destroy
+
+    redirect_to("/actors")
   end
 end

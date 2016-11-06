@@ -47,6 +47,6 @@ Rails.application.routes.draw do
   get("/actors/:id/edit", :controller => "actors", :action => "edit")
   get("/update_actor/:id", :controller => "actors", :action => "update_row")
 
-  #Role Routes
-  #Read
+  #Delete
+  get("/delete_actor/:id", :controller => "actors", :action => "delete_row")
 end
