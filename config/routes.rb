@@ -37,6 +37,10 @@ Rails.application.routes.draw do
   get("/actors", :controller =>"actors", :action => "index")
   get("/actors/:id", :controller => "actors", :action => "show")
 
+  #Update
+  get("/actors/:id/edit", :controller => "actors", :action => "edit")
+  get("/update_actor/:id", :controller => "actors", :action => "update_row")
+
   #Role Routes
   #Read
 end

@@ -22,4 +22,19 @@ class ActorsController < ApplicationController
 
     redirect_to("/actors/#{@actor.id}")
   end
+
+  def edit
+    @actor = Actor.find_by({ :id => params[:id]})
+  end
+
+  def update_row
+    @actor = Actor.find_by({ :id => params[:id]})
+    @actor.dob = params[:dob]
+    @actor.name = params[:name]
+    @actor.bio = params[:bio]
+    @actor.image_url = params[:image_url]
+    @actor.save
+
+    redirect_to("/actors/#{@actor.id}")
+  end
 end
