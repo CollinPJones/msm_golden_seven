@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get("/directors", :controller => "directors", :action => "index")
   get("/directors/:id", :controller => "directors", :action => "show")
 
+  #Update
+  get("/directors/:id/edit", :controller => "directors", :action => "edit")
+  get("/update_director/:id", :controller => "directors", :action => "update_row")
 
   #Movie Routes
   #Create

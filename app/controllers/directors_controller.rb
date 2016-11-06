@@ -22,4 +22,13 @@ class DirectorsController < ApplicationController
     redirect_to("/directors/#{@director.id}")
   end
 
+  def edit
+    @director = Director.find_by({:id => params[:id]})
+  end
+
+  def update_row
+    @director = Director.find_by({:id => params[:id]})
+    redirect_to("/directors/#{@director.id}")
+  end
+
 end
