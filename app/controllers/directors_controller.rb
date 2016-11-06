@@ -7,4 +7,19 @@ class DirectorsController < ApplicationController
     #Parameters: {"id"=>"1"}
     @director = Director.find_by({:id => params[:id]})
   end
+
+  def new_form
+
+  end
+
+  def create_row
+    @director = Director.new
+    @director.dob = params[:dob]
+    @director.name = params[:name]
+    @director.bio = params[:bio]
+    @director.image_url = params[:image_url]
+    @director.save
+    redirect_to("/directors/#{@director.id}")
+  end
+
 end
