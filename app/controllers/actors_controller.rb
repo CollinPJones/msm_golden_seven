@@ -39,9 +39,7 @@ class ActorsController < ApplicationController
   end
 
   def delete_row
-    actor = Actor.find_by({ :id => params[:id]})
-    actor.destroy
-
-    redirect_to("/actors")
+    @actor = Actor.find_by({ :id => params[:id]})
+    @actor.destroy
   end
 end

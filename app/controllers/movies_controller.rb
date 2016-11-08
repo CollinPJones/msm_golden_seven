@@ -40,10 +40,8 @@ class MoviesController < ApplicationController
   end
 
   def delete_row
-    movie = Movie.find_by({ :id => params[:id]})
-    movie.destroy
-
-    redirect_to("/movies")
+    @movie = Movie.find_by({ :id => params[:id]})
+    @movie.destroy
   end
 
 end

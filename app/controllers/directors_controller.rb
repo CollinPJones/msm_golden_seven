@@ -37,9 +37,8 @@ class DirectorsController < ApplicationController
   end
 
   def delete_row
-    director = Director.find_by({:id => params[:id]})
-    director.destroy
-    redirect_to("/directors")
+    @director = Director.find_by({:id => params[:id]})
+    @director.destroy
   end
 
 end
